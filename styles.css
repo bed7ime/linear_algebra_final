@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 95%;
+  padding-top: 15px;
+  text-decoration: none;
+}
+
+.container h2 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}

@@ -1,0 +1,91 @@
+{
+  "students": [
+    {
+      "name": "John Doe",
+      "age": 20,
+      "major": "Software Engineer",
+      "gpa": 3.5,
+      "experience": 2
+    },
+    {
+      "name": "Jane Smith",
+      "age": 21,
+      "major": "Software Engineer",
+      "gpa": 3.8,
+      "experience": 3
+    },
+    {
+      "name": "Alice Johnson",
+      "age": 19,
+      "major": "Software Engineer",
+      "gpa": 3.2,
+      "experience": 1
+    },
+    {
+      "name": "Bob Brown",
+      "age": 22,
+      "major": "Business",
+      "gpa": 3.6,
+      "experience": 5
+    },
+    {
+      "name": "Eve Wilson",
+      "age": 20,
+      "major": "Business",
+      "gpa": 3.4,
+      "experience": 1
+    },
+    {
+      "name": "Charlie Davis",
+      "age": 21,
+      "major": "Business",
+      "gpa": 3.7,
+      "experience": 3
+    },
+    {
+      "name": "Grace Martinez",
+      "age": 19,
+      "major": "Business",
+      "gpa": 3.1,
+      "experience": 2
+    },
+    {
+      "name": "David Thompson",
+      "age": 22,
+      "major": "English",
+      "gpa": 3.9,
+      "experience": 2
+    },
+    {
+      "name": "Sophia Lee",
+      "age": 20,
+      "major": "English",
+      "gpa": 3.3,
+      "experience": 1
+    },
+    {
+      "name": "Michael Perez",
+      "age": 21,
+      "major": "English",
+      "gpa": 3.0,
+      "experience": 4
+    }
+  ],
+  "employers": [
+    {
+      "name": "English Tutor",
+      "industry": "English",
+      "location": "Nakhon Pathom"
+    },
+    {
+      "name": "Business Company",
+      "industry": "Business",
+      "location": "Bangkok"
+    },
+    {
+      "name": "Software House",
+      "industry": "Software Engineer",
+      "location": "Ratchaburi"
+    }
+  ]
+}
