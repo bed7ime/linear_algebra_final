@@ -187,3 +187,32 @@ document.getElementById("showCompanyForm").addEventListener("click", () => {
   const modal = new bootstrap.Modal(document.getElementById("addCompanyModal"));
   modal.show();
 });
+
+document.addEventListener("click", (event) => {
+  if (event.target.matches("#studentBtn, #companyBtn")) {
+    event.preventDefault();
+    const form = event.target.closest("form");
+    const isStudent = event.target.id === "studentBtn";
+    const dataKey = isStudent ? "students" : "companies";
+
+    const newData = Array.from(form.elements)
+      .filter((el) => el.tagName === "INPUT")
+      .reduce((obj, el) => {
+        obj[el.id] = el.value;
+        return obj;
+      }, {});
+
+    newData.img =
+      newData.img ||
+      `https://source.unsplash.com/random/150x150/?${
+        isStudent ? "portrait" : "company"
+      }`;
+
+    data[dataKey].push(newData);
+    console.log(`New ${isStudent ? "student" : "company"} added:`, newData);
+
+    form.reset();
+    $(`#${isStudent ? "addStudentModal" : "addCompanyModal"}`).modal("hide");
+  }
+});
+
