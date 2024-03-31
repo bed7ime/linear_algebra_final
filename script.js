@@ -177,3 +177,13 @@ function displayCompanyModal(company) {
   document.getElementById("companyLocation").textContent = company.location;
   modal.show();
 }
+
+document.getElementById("showStudentForm").addEventListener("click", () => {
+  const modal = new bootstrap.Modal(document.getElementById("addStudentModal"));
+  modal.show();
+});
+
+document.getElementById("showCompanyForm").addEventListener("click", () => {
+  const modal = new bootstrap.Modal(document.getElementById("addCompanyModal"));
+  modal.show();
+});
