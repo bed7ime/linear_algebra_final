@@ -86,19 +86,19 @@ const data = {
       name: "English Tutor Company",
       hiring: "English",
       location: "Nakhon Pathom",
-      img: `./imgs/`,
+      img: `https://source.unsplash.com/random/150x150/?company`,
     },
     {
       name: "Business Company",
       hiring: "Business",
       location: "Bangkok",
-      img: `./imgs/`,
+      img: `https://source.unsplash.com/random/150x150/?company`,
     },
     {
       name: "Software House",
       hiring: "Software Engineer",
       location: "Ratchaburi",
-      img: `./imgs/`,
+      img: `https://source.unsplash.com/random/150x150/?company`,
     },
   ],
 };
