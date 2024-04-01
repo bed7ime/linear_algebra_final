@@ -7,10 +7,23 @@ function addCompany(event) {
   const form = document.getElementById("addCompanyForm");
   const companyName = form.companyName.value;
   const hiring = form.hiring.value;
-  const companyPic = form.companyPicture.value;
+  const companyPicInput = form.companyPicture;
+  const companyPicFile = companyPicInput.files[0];
 
-  if (companyName && hiring) {
-    companies.push({ companyName, hiring, companyPic });
+  if (companyName && hiring && companyPicFile) {
+    const companyPicPath = `imgs/${companyPicFile.name}`;
+    companies.push({ companyName, hiring, companyPic: companyPicPath });
+
+    // Move the uploaded file to the 'imgs' folder
+    const reader = new FileReader();
+    reader.readAsDataURL(companyPicFile);
+    reader.onload = function (e) {
+      const a = document.createElement("a");
+      a.href = e.target.result;
+      a.download = companyPicPath;
+      a.click();
+    };
+
     form.reset();
     updateMatchTable();
   } else {
@@ -24,10 +37,28 @@ function addStudent(event) {
   const studentName = form.studentName.value;
   const major = form.major.value;
   const experience = form.experience.value;
-  const studentPic = form.profilePicture.value;
+  const studentPicInput = form.profilePicture;
+  const studentPicFile = studentPicInput.files[0];
 
-  if (studentName && major && experience) {
-    students.push({ studentName, major, experience, studentPic });
+  if (studentName && major && experience && studentPicFile) {
+    const studentPicPath = `imgs/${studentPicFile.name}`;
+    students.push({
+      studentName,
+      major,
+      experience,
+      studentPic: studentPicPath,
+    });
+
+    // Move the uploaded file to the 'imgs' folder
+    const reader = new FileReader();
+    reader.readAsDataURL(studentPicFile);
+    reader.onload = function (e) {
+      const a = document.createElement("a");
+      a.href = e.target.result;
+      a.download = studentPicPath;
+      a.click();
+    };
+
     form.reset();
     updateMatchTable();
   } else {
